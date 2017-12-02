@@ -1,0 +1,115 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{lmodern}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\Hrule}{\par\rule{\linewidth}{0.3mm}}
+
+\renewcommand{\baselinestretch}{1.14} 
+
+\title{Curriculum Vitae}
+\author{Justin Miron}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}
+  
+\titlespacing\section{0pt}{8pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\newcommand{\leftrightrow}[2]{
+	#1 \hfill #2 \\
+}
+
+\newcommand{\titlesection}{
+\parindent=0pt
+\setlength{\parskip}{0.1em}
+\par{\LARGE Justin Miron}
+\par{3556 North Rd, Clyde, MI - Email: justinmiron@cs.cornell.edu - Phone: (810)-841-8557}
+\vspace{-0.5em}
+\Hrule
+}
+
+\newcommand{\teachblock}[2]{
+	\leftrightrow{#1}{#2}
+}
+
+\newcommand{\workblock}[3]{
+	\leftrightrow{\textbf{#1}}{#2}
+    #3 \\
+}
+
+\newcommand{\researchblock}[3]{
+	\textbf{#1} \hfill #2
+}
+
+
+\newcommand{\educationblock}[3]{
+	\leftrightrow{\textbf{#1}}{#2}
+    #3 \\
+}
+
+\begin{document}
+\titlesection
+\setlength{\parskip}{0em}
+
+\section{Education}
+\hrule \vspace{0.4em} 
+\educationblock{Ph.D. Student, Cornell University}{August 2017 - May 2022 (Anticipated)}{Department of Computer Science}
+Advisor: Rachit Agarwal
+\vspace{0.5em}
+
+\educationblock{B.S., University of Illinois at Urbana-Champaign}{August 2013 - May 2017}{Department of Computer Engineering}
+Senior Thesis: "Fine-grained parallel computation in the cloud"
+
+\section{Relevant Coursework}
+\hrule \vspace{0.4em}
+Graduate Computer Networks, Graduate Distributed Algorithms, Distributed Systems, Networking with Big Data, Algorithms and Models of Computation, Operating System Design
+
+\section{Research Interests}
+\hrule \vspace{0.4em}
+Distributed systems, datacenter networking, and peer-to-peer systems
+
+\section{Undergraduate Research Projects}
+\hrule \vspace{0.4em}
+\researchblock{Parallel object replication for scalable parallel processing}{Senior Thesis}
+\\\\
+\researchblock{Bounded memory-efficient concurrent lock-free queue}{Parallel Programming Lab}
+\\\\
+\researchblock{Rendezvous protocol for no-copy RDMA}{Parallel Programming Lab}
+
+\section{Work Experience}
+\hrule \vspace{0.4em}
+\workblock{Software Engineering Intern at Microsoft}{Aliso Viejo, CA - Summer 2017}{Worked with Azure Data Warehouse team to build a prototype of a distributed query store for improved query monitoring and debugging.} 
+
+\vspace{-0.8em}
+
+\workblock{Software Engineer at Charmworks Inc.}{Champaign, IL - December 2017 to May 2017}{Optimized a parallel
+runtime systems and developed distributed algorithms. } 
+
+\vspace{-0.8em}
+
+\workblock{Research Assistant at Parallel Programming Lab}{Urbana, IL - February 2016 to May 2017}{Worked with the Parallel Programming Lab under Professor Laxmikant Kale.}
+
+\vspace{-0.8em}
+
+\workblock{Software Engineer, Tools and Infrastructure Intern at Google} {Seattle, WA - Summer 2016}{Implemented network health checks for the Google Compute Engine test infrastructure.}
+
+\vspace{-0.8em}
+
+\section{Relevant Teaching Experience}
+\hrule \vspace{0.4em}
+\teachblock{\textbf{Database Systems}, Cornell University, \textit{Teaching Assistant}}{Aug 2017 - Dec 2017}
+\teachblock{\textbf{Data Structures}, University of Illinois at Urbana-Champaign, \textit{Course Assistant}}{Aug 2015 - May 2017}
+
+\vspace{-0.8em}
+
+\section{Programming Skills}
+\hrule \vspace{0.4em}
+\textbf{Languages:} C, C++, C\#, Python, Java \\
+\textbf{Parallel Programming \& Systems:} Pthreads, MPI, OpenMP, Charm++, Map-Reduce, Spark
+
+
+
+\end{document}
