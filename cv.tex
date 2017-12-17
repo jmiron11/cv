@@ -26,7 +26,7 @@
 \parindent=0pt
 \setlength{\parskip}{0.1em}
 \par{\LARGE Justin Miron}
-\par{3556 North Rd, Clyde, MI - Email: justinmiron@cs.cornell.edu - Phone: (810)-841-8557}
+\par{110 Lake Street, Ithaca, NY -  justinmiron@cs.cornell.edu - (810)-841-8557}
 \vspace{-0.5em}
 \Hrule
 }
@@ -41,7 +41,7 @@
 }
 
 \newcommand{\researchblock}[3]{
-	\textbf{#1} \hfill #2
+	\leftrightrow{\textbf{#1}}{#2}#3
 }
 
 
@@ -71,30 +71,69 @@ Graduate Computer Networks, Graduate Distributed Algorithms, Distributed Systems
 \hrule \vspace{0.4em}
 Distributed systems, datacenter networking, and peer-to-peer systems
 
+\section{Research Projects}
+\hrule \vspace{0.4em}
+\researchblock{Storage-aware scheduling for disaggregation}{}
+{
+	Building a system that efficiently utilizing ephemeral storage on compute nodes in disaggregated datacenters we can reduce the cost of all storage traffic traversing the network. This work with Rachit Agarwal involves co-designing scheduling and storage management to optimize for bandwidth reduction and average job completion time.
+}
+
+\vspace{0.6em}
+
+\researchblock{Frequency-attack resilient databases}{}
+{
+	This work with Rachit Agarwal and Tom Ristenpart involves augmenting encryption techniques to build a frequency-attack resilient database.
+}
+
 \section{Undergraduate Research Projects}
 \hrule \vspace{0.4em}
 \researchblock{Parallel object replication for scalable parallel processing}{Senior Thesis}
-\\\\
+{
+	By allowing a parallel runtime systems to adaptively replicate overloaded processing elements and load balance requests between replicas, the system may reduce the overhead of any given element. This work involved developing a replication cost model, identifying consistency requirements for different requests, and
+	implementing the system in Charm++\footnote[1]{
+	Charm++ is a object-based parallel programming language. The objects are the elements of execuiton and are distributed across machines.}
+}
+
+\vspace{0.6em}
+
+\researchblock{Elastic distributed computation for hpc in the cloud}{Senior Thesis}
+{
+	Modified a parallel runtime system to efficiently support elastic parallel applications in the cloud. Improvements investigated the similarities between proactive fault tolerance techniques and requirements of elastic compute. Optimized these fault tolerance techniques for bulk opperations allowing for elastic compute.
+}
+
+\vspace{0.6em}
+
 \researchblock{Bounded memory-efficient concurrent lock-free queue}{Parallel Programming Lab}
-\\\\
-\researchblock{Rendezvous protocol for no-copy RDMA}{Parallel Programming Lab}
+{
+	Designed a multi-producer multi-consumer lock-free queue that allowed for a configurable upper bound and memory usage linear with the queue size. Memory reclamation was handled through providing provable bounds on accessible memory by producers and consumers in the queue. Used as a single messaging buffer per node for symmetric multiprocessing in Charm++\footnotemark[1], providing a 7\% reduction on round-trip message times.
+}
+
+\vspace{0.6em}
+
+\researchblock{Rendezvous protocol for no-copy RDMA messaging}{Parallel Programming Lab}{
+	This work seeked to realize the capabilities of RDMA as a basis for asynchronous messaging operations on CRAY super computers in Charm++\footnotemark[1] without the need for message copy operations. 
+}
 
 \section{Work Experience}
 \hrule \vspace{0.4em}
-\workblock{Software Engineering Intern at Microsoft}{Aliso Viejo, CA - Summer 2017}{Worked with Azure Data Warehouse team to build a prototype of a distributed query store for improved query monitoring and debugging.} 
+\workblock{Software Engineering Intern at Microsoft}{Aliso Viejo, CA - Summer 2017}{Worked with Azure Data Warehouse team to build a prototype of a distributed query store for more extensive query monitoring and debugging of distributed queries.} 
 
 \vspace{-0.8em}
 
 \workblock{Software Engineer at Charmworks Inc.}{Champaign, IL - December 2017 to May 2017}{Optimized a parallel
-runtime systems and developed distributed algorithms. } 
+runtime system, Charm++, for performance. Modified shared memory parallel applications to operate scalably in a distributed memory context.} 
 
 \vspace{-0.8em}
 
-\workblock{Research Assistant at Parallel Programming Lab}{Urbana, IL - February 2016 to May 2017}{Worked with the Parallel Programming Lab under Professor Laxmikant Kale.}
+\workblock{Research Assistant at Parallel Programming Lab}{Urbana, IL - February 2016 to May 2017}{Performed research with the Parallel Programming Lab under Professor Laxmikant Kale to reduce and improve communication patterns in parallel algorithms and runtime systems.}
 
 \vspace{-0.8em}
 
-\workblock{Software Engineer, Tools and Infrastructure Intern at Google} {Seattle, WA - Summer 2016}{Implemented network health checks for the Google Compute Engine test infrastructure.}
+\workblock{Software Engineer, Tools and Infrastructure Intern at Google} {Seattle, WA - Summer 2016}{Worked with the Google Compute Engine infrastructure team to implement methods for network failure detection and debugging for the Google Compute Engine.}
+
+\vspace{-0.8em}
+
+\workblock{Software Engineering Intern at ViaSat Inc.} {Carlsbad, CA - Summer 2015}{Expanded an antenna control unit simulator to support real-time message modification and support for new antenna types.}
 
 \vspace{-0.8em}
 
