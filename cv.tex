@@ -5,6 +5,15 @@
 \usepackage{setspace}
 \usepackage{titlesec}
 \usepackage{lmodern}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=MidnightBlue,
+}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \newcommand{\Hrule}{\par\rule{\linewidth}{0.3mm}}
@@ -15,9 +24,9 @@
 \author{Justin Miron}
 
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}
-  
-\titlespacing\section{0pt}{8pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
+\titlespacing\section{0pt}{8pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\setlength{\leftskip}{2pt}
 \newcommand{\leftrightrow}[2]{
 	#1 \hfill #2 \\
 }
@@ -35,10 +44,36 @@
 	\leftrightrow{#1}{#2}
 }
 
-\newcommand{\workblock}[3]{
-	\leftrightrow{\textbf{#1}}{#2}
-    #3 \\
+
+\newcommand{\workblock}[4]{
+\begin{minipage}[t]{0.14\textwidth}
+\vspace*{0.4em}
+\begin{flushright}#3\end{flushright}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.82\textwidth}
+\vspace*{0.4em}
+	\textbf{#1} \\
+	#2 \\
+    #4
+\end{minipage}
+\vspace{0.7em}
 }
+
+\newcommand{\workblocktwo}[3]{
+\begin{minipage}[t]{0.14\textwidth}
+\vspace*{0.4em}
+\begin{flushright}#2\end{flushright}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.82\textwidth}
+\vspace*{0.4em}
+	\textbf{#1} \\
+    #3
+\end{minipage}
+\vspace{0.7em}
+}
+
 
 \newcommand{\researchblock}[3]{
 	\leftrightrow{\textbf{#1}}{#2}#3
@@ -55,43 +90,43 @@
 \setlength{\parskip}{0em}
 
 \section{Education}
-\hrule \vspace{0.4em} 
+\vspace{0.1em}
 \educationblock{Ph.D. Student, Cornell University}{August 2017 - May 2022 (Anticipated)}{Department of Computer Science}
-Advisor: Rachit Agarwal
+Advisor: \href{http://www.cs.cornell.edu/~ragarwal/}{Rachit Agarwal}
 \vspace{0.5em}
 
 \educationblock{B.S., University of Illinois at Urbana-Champaign}{August 2013 - May 2017}{Department of Computer Engineering}
-Senior Thesis: "Fine-grained parallel computation in the cloud"
+Advisor: \href{http://charm.cs.uiuc.edu/~kale/}{Laxmikant Kale}
 
 \section{Relevant Coursework}
-\hrule \vspace{0.4em}
+\vspace{0.1em}
 Graduate Computer Networks, Graduate Distributed Algorithms, Distributed Systems, Networking with Big Data, Algorithms and Models of Computation, Operating System Design
 
 \section{Research Interests}
-\hrule \vspace{0.4em}
+\vspace{0.1em}
 Distributed systems, datacenter networking, and peer-to-peer systems
 
 \section{Research Projects}
-\hrule \vspace{0.4em}
-\researchblock{Storage-aware scheduling for disaggregation}{}
+\vspace{0.1em}
+\researchblock{Storage-aware scheduling for disaggregated datacenters}{}
 {
-	Building a system that efficiently utilizing ephemeral storage on compute nodes in disaggregated datacenters we can reduce the cost of all storage traffic traversing the network. This work with Rachit Agarwal involves co-designing scheduling and storage management to optimize for bandwidth reduction and average job completion time.
+	Work with \href{http://www.cs.cornell.edu/~ragarwal/}{Rachit Agarwal} that seeks to build a system that efficiently utilizes ephemeral storage on copute nodes in disaggregated datacenters to reduce the cost of storage traffic traveresing the network. Our approach involves co-designing scheduling and storage management to optimize for network traffic and storage utilization while maximizing utilization.
 }
 
 \vspace{0.6em}
 
-\researchblock{Frequency-attack resilient databases}{}
+\researchblock{Frequency analysis resilient databases}{}
 {
-	This work with Rachit Agarwal and Tom Ristenpart involves augmenting encryption techniques to build a frequency-attack resilient database.
+	This work with Professors \href{http://www.cs.cornell.edu/~ragarwal/}{Rachit Agarwal}  and \href{https://rist.tech.cornell.edu/}{Tom Ristenpart} involves augmenting encryption techniques to decrease the efficacy of frequency analysis attacks on databases.
 }
 
 \section{Undergraduate Research Projects}
-\hrule \vspace{0.4em}
+\vspace{0.1em}
 \researchblock{Parallel object replication for scalable parallel processing}{Senior Thesis}
 {
 	By allowing a parallel runtime systems to adaptively replicate overloaded processing elements and load balance requests between replicas, the system may reduce the overhead of any given element. This work involved developing a replication cost model, identifying consistency requirements for different requests, and
 	implementing the system in Charm++\footnote[1]{
-	Charm++ is a object-based parallel programming language. The objects are the elements of execuiton and are distributed across machines.}
+	\href{http://charm.cs.illinois.edu/research/charm}{Charm++} is a object-based parallel programming language. The objects are the elements of execuiton and are distributed across machines.}
 }
 
 \vspace{0.6em}
@@ -115,37 +150,29 @@ Distributed systems, datacenter networking, and peer-to-peer systems
 }
 
 \section{Work Experience}
-\hrule \vspace{0.4em}
-\workblock{Software Engineering Intern at Microsoft}{Aliso Viejo, CA - Summer 2017}{Worked with Azure Data Warehouse team to build a prototype of a distributed query store for more extensive query monitoring and debugging of distributed queries.} 
+\vspace{-0.4em}
+\workblock{Software Engineering Intern at Microsoft, Aliso Viejo, CA}{\href{https://azure.microsoft.com/en-us/services/sql-data-warehouse/}{Azure Data Warehouse Group}}{Summer 2017}{Built a distributed query store prototype for more extensive monitoring and debugging of distributed queries.} 
 
-\vspace{-0.8em}
+\workblocktwo{Software Engineer at \href{http://www.charmplusplus.com/}{Charmworks Inc.}, Champaign, IL}{December 2017 - May 2017}{Optimized a parallel
+runtime system, Charm++\footnotemark[1], for high performance computing applications. Modified shared memory parallel applications to operate scalably in a distributed memory context.} 
 
-\workblock{Software Engineer at Charmworks Inc.}{Champaign, IL - December 2017 to May 2017}{Optimized a parallel
-runtime system, Charm++, for performance. Modified shared memory parallel applications to operate scalably in a distributed memory context.} 
+\workblock{Research Assistant at University of Illinois at Urbana-Champaign, Urbana, IL}{\href{http://charm.cs.uiuc.edu/}{Parallel Programming Lab}}{February 2016 - May 2017}{Performed research under Professor \href{http://charm.cs.uiuc.edu/~kale/}{Laxmikant Kale} to reduce and improve communication patterns in parallel algorithms and runtime systems.}
 
-\vspace{-0.8em}
+\workblock{Software Engineer, Tools and Infrastructure Intern at Google, Seattle, WA}{\href{https://cloud.google.com/compute/}{Google Compute Engine}}{Summer 2016}{Worked with the Google Compute Engine infrastructure team to implement methods for network failure detection and debugging for the Google Compute Engine.}
 
-\workblock{Research Assistant at Parallel Programming Lab}{Urbana, IL - February 2016 to May 2017}{Performed research with the Parallel Programming Lab under Professor Laxmikant Kale to reduce and improve communication patterns in parallel algorithms and runtime systems.}
-
-\vspace{-0.8em}
-
-\workblock{Software Engineer, Tools and Infrastructure Intern at Google} {Seattle, WA - Summer 2016}{Worked with the Google Compute Engine infrastructure team to implement methods for network failure detection and debugging for the Google Compute Engine.}
-
-\vspace{-0.8em}
-
-\workblock{Software Engineering Intern at ViaSat Inc.} {Carlsbad, CA - Summer 2015}{Expanded an antenna control unit simulator to support real-time message modification and support for new antenna types.}
+\workblock{Software Engineering Intern at ViaSat Inc., Carlsbad, CA}{\href{https://www.viasat.com/products/antenna-controllers}{Antenna Control Unit Group}}{Summer 2015}{Expanded an antenna control unit simulator to support real-time message modification and support for new antenna types.}
 
 \vspace{-0.8em}
 
 \section{Relevant Teaching Experience}
-\hrule \vspace{0.4em}
+\vspace{0.1em}
 \teachblock{\textbf{Database Systems}, Cornell University, \textit{Teaching Assistant}}{Aug 2017 - Dec 2017}
 \teachblock{\textbf{Data Structures}, University of Illinois at Urbana-Champaign, \textit{Course Assistant}}{Aug 2015 - May 2017}
 
 \vspace{-0.8em}
 
 \section{Programming Skills}
-\hrule \vspace{0.4em}
+\vspace{0.1em}
 \textbf{Languages:} C, C++, C\#, Python, Java \\
 \textbf{Parallel Programming \& Systems:} Pthreads, MPI, OpenMP, Charm++, Map-Reduce, Spark
 
