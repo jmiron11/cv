@@ -34,16 +34,38 @@
 \newcommand{\titlesection}{
 \parindent=0pt
 \setlength{\parskip}{0.1em}
-\par{\LARGE Justin Miron}
-\par{110 Lake Street, Ithaca, NY -  justinmiron@cs.cornell.edu - (810)-841-8557}
-\vspace{-0.5em}
+
+\par{\begin{center}\LARGE Justin Miron\end{center}}
+
+\begin{minipage}[t]{0.40\textwidth}
+Address: 110 Lake Street, Ithaca, NY, 14850 \\
+Links: \href{http://justinmiron.com}{Website}, \href{https://github.com/jmiron11}{Github}, \href{https://www.linkedin.com/in/justinmiron/}{LinkedIn}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.40\textwidth}
+Email: \href{mailto:justinmiron@cs.cornell.edu}{justinmiron@cs.cornell.edu} \\
+Phone: (810) 841-8557
+\end{minipage}
+\vspace{0.3em}
 \Hrule
 }
 
-\newcommand{\teachblock}[2]{
-	\leftrightrow{#1}{#2}
-}
+% \newcommand{\teachblock}[2]{
+% 	\leftrightrow{#1}{#2}
+% }
 
+\newcommand{\teachblock}[2]{
+\begin{minipage}[t]{0.20\textwidth}
+\vspace*{0.4em}
+\begin{flushright}#2\end{flushright}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.76\textwidth}
+\vspace*{0.4em}
+	#1
+\end{minipage}
+\vspace{0.2em}
+}
 
 \newcommand{\workblock}[4]{
 \begin{minipage}[t]{0.14\textwidth}
@@ -82,8 +104,22 @@
 
 \newcommand{\educationblock}[3]{
 	\leftrightrow{\textbf{#1}}{#2}
-    #3 \\
+    #3
 }
+
+% \newcommand{\educationblock}[3]{
+% \begin{minipage}[t]{0.14\textwidth}
+% \vspace*{0.4em}
+% \begin{flushright}#2\end{flushright}
+% \end{minipage}
+% \hfill\vline\hfill
+% \begin{minipage}[t]{0.82\textwidth}
+% \vspace*{0.4em}
+% 	\textbf{#1} \\
+% 	#3 \\
+% \end{minipage}
+% \vspace{0.7em}
+% }
 
 \begin{document}
 \titlesection
@@ -91,12 +127,13 @@
 
 \section{Education}
 \vspace{0.1em}
-\educationblock{Ph.D. Student, Cornell University}{August 2017 - May 2022 (Anticipated)}{Department of Computer Science}
-Advisor: \href{http://www.cs.cornell.edu/~ragarwal/}{Rachit Agarwal}
+\educationblock{Ph.D. Student, Cornell University}{August 2017 - May 2022 (Anticipated)}{Department of Computer Science \\
+Advisor: \href{http://www.cs.cornell.edu/~ragarwal/}{Prof. Rachit Agarwal}}
 \vspace{0.5em}
 
-\educationblock{B.S., University of Illinois at Urbana-Champaign}{August 2013 - May 2017}{Department of Computer Engineering}
-Advisor: \href{http://charm.cs.uiuc.edu/~kale/}{Laxmikant Kale}
+\educationblock{B.S., University of Illinois at Urbana-Champaign}{August 2013 - May 2017}{Department of Computer Engineering \\
+Thesis: "Fine-grained parallel computation in the cloud" \\
+Advisor: \href{http://charm.cs.uiuc.edu/~kale/}{Prof. Laxmikant V. Kal\'e}}
 
 \section{Relevant Coursework}
 \vspace{0.1em}
@@ -110,14 +147,14 @@ Distributed systems, datacenter networking, and peer-to-peer systems
 \vspace{0.1em}
 \researchblock{Storage-aware scheduling for disaggregated datacenters}{}
 {
-	Work with \href{http://www.cs.cornell.edu/~ragarwal/}{Rachit Agarwal} that seeks to build a system that efficiently utilizes ephemeral storage on copute nodes in disaggregated datacenters to reduce the cost of storage traffic traveresing the network. Our approach involves co-designing scheduling and storage management to optimize for network traffic and storage utilization while maximizing utilization.
+	Work with \href{http://www.cs.cornell.edu/~ragarwal/}{Rachit Agarwal} that seeks to build a system that efficiently utilizes ephemeral storage on compute nodes in disaggregated datacenters to reduce the cost of storage traffic traversing the network. Our approach involves co-designing scheduling and storage management to optimize for network traffic and storage utilization while maximizing utilization.
 }
 
 \vspace{0.6em}
 
 \researchblock{Frequency analysis resilient databases}{}
 {
-	This work with Professors \href{http://www.cs.cornell.edu/~ragarwal/}{Rachit Agarwal}  and \href{https://rist.tech.cornell.edu/}{Tom Ristenpart} involves augmenting encryption techniques to decrease the efficacy of frequency analysis attacks on databases.
+	This work with Professors \href{http://www.cs.cornell.edu/~ragarwal/}{Rachit Agarwal}  and \href{https://rist.tech.cornell.edu/}{Tom Ristenpart} involves decreasing the efficacy of frequency analysis attacks on databases.
 }
 
 \section{Undergraduate Research Projects}
@@ -126,14 +163,14 @@ Distributed systems, datacenter networking, and peer-to-peer systems
 {
 	By allowing a parallel runtime systems to adaptively replicate overloaded processing elements and load balance requests between replicas, the system may reduce the overhead of any given element. This work involved developing a replication cost model, identifying consistency requirements for different requests, and
 	implementing the system in Charm++\footnote[1]{
-	\href{http://charm.cs.illinois.edu/research/charm}{Charm++} is a object-based parallel programming language. The objects are the elements of execuiton and are distributed across machines.}
+	\href{http://charm.cs.illinois.edu/research/charm}{Charm++} is a object-based parallel programming language. The objects are the elements of execution and are distributed across machines.}
 }
 
 \vspace{0.6em}
 
-\researchblock{Elastic distributed computation for hpc in the cloud}{Senior Thesis}
+\researchblock{Elastic computation for high performance computing in the cloud}{Senior Thesis}
 {
-	Modified a parallel runtime system to efficiently support elastic parallel applications in the cloud. Improvements investigated the similarities between proactive fault tolerance techniques and requirements of elastic compute. Optimized these fault tolerance techniques for bulk opperations allowing for elastic compute.
+	Modified a parallel runtime system to efficiently support elastic parallel applications in the cloud. Improvements investigated the similarities between proactive fault tolerance techniques and requirements of elastic compute. Optimized these fault tolerance techniques for bulk operations to support efficiently changing the set of compute nodes.
 }
 
 \vspace{0.6em}
@@ -146,7 +183,7 @@ Distributed systems, datacenter networking, and peer-to-peer systems
 \vspace{0.6em}
 
 \researchblock{Rendezvous protocol for no-copy RDMA messaging}{Parallel Programming Lab}{
-	This work seeked to realize the capabilities of RDMA as a basis for asynchronous messaging operations on CRAY super computers in Charm++\footnotemark[1] without the need for message copy operations. 
+	This work augmented messaging within the Charm++\footnotemark[1] runtime system to utilize RDMA for asynchronous messaging through the use of a Rendezvous protocol. 
 }
 
 \section{Work Experience}
@@ -154,7 +191,7 @@ Distributed systems, datacenter networking, and peer-to-peer systems
 \workblock{Software Engineering Intern at Microsoft, Aliso Viejo, CA}{\href{https://azure.microsoft.com/en-us/services/sql-data-warehouse/}{Azure Data Warehouse Group}}{Summer 2017}{Built a distributed query store prototype for more extensive monitoring and debugging of distributed queries.} 
 
 \workblocktwo{Software Engineer at \href{http://www.charmplusplus.com/}{Charmworks Inc.}, Champaign, IL}{December 2017 - May 2017}{Optimized a parallel
-runtime system, Charm++\footnotemark[1], for high performance computing applications. Modified shared memory parallel applications to operate scalably in a distributed memory context.} 
+runtime system, Charm++\footnotemark[1], for high performance computing applications. Modified shared memory parallel applications to operate in a distributed memory context.} 
 
 \workblock{Research Assistant at University of Illinois at Urbana-Champaign, Urbana, IL}{\href{http://charm.cs.uiuc.edu/}{Parallel Programming Lab}}{February 2016 - May 2017}{Performed research under Professor \href{http://charm.cs.uiuc.edu/~kale/}{Laxmikant Kale} to reduce and improve communication patterns in parallel algorithms and runtime systems.}
 
@@ -162,14 +199,14 @@ runtime system, Charm++\footnotemark[1], for high performance computing applicat
 
 \workblock{Software Engineering Intern at ViaSat Inc., Carlsbad, CA}{\href{https://www.viasat.com/products/antenna-controllers}{Antenna Control Unit Group}}{Summer 2015}{Expanded an antenna control unit simulator to support real-time message modification and support for new antenna types.}
 
-\vspace{-0.8em}
+\vspace{-0.4em}
 
 \section{Relevant Teaching Experience}
-\vspace{0.1em}
-\teachblock{\textbf{Database Systems}, Cornell University, \textit{Teaching Assistant}}{Aug 2017 - Dec 2017}
+\vspace{-0.8em}
+\teachblock{\textbf{Database Systems}, Cornell University, \textit{Teaching Assistant}}{Aug 2017 - Dec 2017} \\
 \teachblock{\textbf{Data Structures}, University of Illinois at Urbana-Champaign, \textit{Course Assistant}}{Aug 2015 - May 2017}
 
-\vspace{-0.8em}
+\vspace{-0.44em}
 
 \section{Programming Skills}
 \vspace{0.1em}
