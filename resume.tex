@@ -82,6 +82,19 @@ Phone: (810) 841-8557
 \vspace{0.7em}
 }
 
+\newcommand{\workblockempty}[2]{
+\begin{minipage}[t]{0.14\textwidth}
+\vspace*{0.4em}
+\begin{flushright}#2\end{flushright}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.82\textwidth}
+\vspace*{0.4em}
+	\textbf{#1}
+\end{minipage}
+\vspace{0.1em}
+}
+
 \newcommand{\workblocktwo}[3]{
 \begin{minipage}[t]{0.14\textwidth}
 \vspace*{0.4em}
@@ -124,26 +137,20 @@ Phone: (810) 841-8557
 \begin{document}
 \titlesection
 \setlength{\parskip}{0em}
-
+\vspace{-2.5em}
 \section{Education}
 \vspace{0.1em}
 \educationblock{Ph.D. Student, Cornell University}{August 2017 - }{Department of Computer Science \\
 Advisor: \href{http://www.cs.cornell.edu/~ragarwal/}{Prof. Rachit Agarwal}}
 \vspace{0.5em}
 
-\educationblock{B.S., University of Illinois at Urbana-Champaign}{August 2013 - May 2017}{Department of Computer Engineering \\
-Thesis: "Fine-grained parallel computation in the cloud" \\
-Advisor: \href{http://charm.cs.uiuc.edu/~kale/}{Prof. Laxmikant V. Kal\'e}}
+\educationblock{B.S., University of Illinois at Urbana-Champaign}{August 2013 - May 2017}{Department of Computer Engineering}
 
 \section{Relevant Coursework}
 \vspace{0.1em}
 Graduate \{Computer Networks, Distributed Algorithms, Distributed Systems, Computer Networks, Programming Languages \& Compilers\}, Computer Architecture, Networking with Big Data, Operating System Design
 
-\section{Research Interests}
-\vspace{0.1em}
-Distributed systems, datacenter networking, and peer-to-peer systems
-
-\section{Research Projects}
+\section{Current Research Projects}
 \vspace{0.1em}
 \researchblock{Compute-storage stack for storage-disaggregated datacenters}{\href{http://www.cs.cornell.edu/~ragarwal/}{Rachit Agarwal}}
 {
@@ -159,39 +166,38 @@ Distributed systems, datacenter networking, and peer-to-peer systems
 
 \section{Prior Research Projects}
 \vspace{0.1em}
-\researchblock{Elastic computation and adaptive load balancing for scalable parallel programming on public clouds}{Senior Thesis}
+\researchblock{Compute scaling for parallel computing on high latency public clouds}{Senior Thesis}
 {
-	This work aimed to reduce the impact of high latency in public clouds (in comparison to high performance clusters). This is done through two techniques: on-demand adaptive replication of parallel computation units and system support for hardware elasticity during parallel computation. This was built on top of the Charm++\footnote[1]{
-	\href{http://charm.cs.illinois.edu/research/charm}{Charm++} is a object-based parallel programming language. The objects are the elements of execution and are distributed across machines.} parallel runtime.
+ 	\textit{Techniques: } On-demand adaptive replication and load balancing, system support for hardware elasticity
 }
 
 \vspace{0.6em}
 
 \researchblock{Lowering message latency on high performance clusters}{Parallel Programming Lab}
 {
-	In communication-bound application, performance is tightly coupled with message latency. The overhead was reduced through designing a new lock-free multi-producer multi-consumer queue with memory usage linear with queue size; and work on a new rendezvous protocol for no-copy RDMA messaging.
+	\textit{Techniques: } Near-unbounded multi-producer multi-consumer lock-free queue, no-copy RDMA protocol.
 }
 
 \section{Work Experience}
 \vspace{-0.4em}
-\workblock{Software Engineering Intern at Google, Sunnyvale, CA}{\href{https://ai.google/research/pubs/pub43838}{Network Infrastructure}}{Summer 2018}{Improved network bandwidth allocation on Google's inter-datacenter WAN. Techniques included machine learning and real-time control system algorithms; and algorithmic analysis of existing bandwidth allocation techniques.} 
+\workblock{Software Engineering Intern at Google, Sunnyvale, CA}{\href{https://ai.google/research/pubs/pub43838}{Network Infrastructure}}{Summer 2018}{Improved network bandwidth allocation on Google's inter-datacenter WAN. Techniques to improve allocation included machine learning and real-time control system algorithms; and algorithmic analysis of existing bandwidth allocation techniques.}
 
-\workblock{Software Engineering Intern at Microsoft, Aliso Viejo, CA}{\href{https://azure.microsoft.com/en-us/services/sql-data-warehouse/}{Azure Data Warehouse Group}}{Summer 2017}{Built a distributed query store prototype for more extensive monitoring and debugging of distributed queries.} 
+\workblock{Software Engineering Intern at Microsoft, Aliso Viejo, CA}{\href{https://azure.microsoft.com/en-us/services/sql-data-warehouse/}{Azure Data Warehouse Group}}{Summer 2017}{Built a distributed query monitoring prototype through instrumentation and communication across distributed query execution components.}
 
-\workblocktwo{Software Engineer at \href{http://www.charmplusplus.com/}{Charmworks Inc.}, Champaign, IL}{December 2017 - May 2017}{Optimized a parallel
-runtime system, Charm++\footnotemark[1], for high performance computing applications. Modified shared memory parallel applications to operate in a distributed memory context.} 
+\workblocktwo{Software Engineer at \href{http://www.charmplusplus.com/}{Charmworks Inc.}, Champaign, IL}{2017}{Optimized communication latency in a parallel runtime system, Charm++, for high performance computing applications, this work built off of prior undergraduate research. Modified shared memory parallel applications to operate with distributed memory with low overhead.
+}
 
-\workblock{Research Assistant at University of Illinois at Urbana-Champaign, Urbana, IL}{\href{http://charm.cs.uiuc.edu/}{Parallel Programming Lab}}{February 2016 - May 2017}{Performed research under Professor \href{http://charm.cs.uiuc.edu/~kale/}{Laxmikant Kale} to reduce and improve communication patterns in parallel algorithms and runtime systems.}
+\workblockempty{Research Assistant at University of Illinois at Urbana-Champaign, Urbana, IL}{2017}
 
-\workblock{Software Engineer, Tools and Infrastructure Intern at Google, Seattle, WA}{\href{https://cloud.google.com/compute/}{Google Compute Engine}}{Summer 2016}{Worked with the Google Compute Engine infrastructure team to implement methods for network failure detection and debugging for the Google Compute Engine.}
+\workblockempty{Intern with \href{https://cloud.google.com/compute/}{Google Compute Engine} at Google, Seattle, WA}{Summer 2016}
 
-\workblock{Software Engineering Intern at ViaSat Inc., Carlsbad, CA}{\href{https://www.viasat.com/products/antenna-controllers}{Antenna Control Unit Group}}{Summer 2015}{Expanded an antenna control unit simulator to support real-time message modification and support for new antenna types.}
+\workblockempty{Intern at ViaSat Inc., Carlsbad, CA}{Summer 2015}
 
 \vspace{-0.4em}
 
 \section{Relevant Teaching Experience}
 \vspace{-0.8em}
-\teachblock{\textbf{Computer Networks}, Cornell University, \textit{Teaching Assistant}}{Jan 2017 - May 2017} \\
+\teachblock{\textbf{Computer Networks}, Cornell University, \textit{Teaching Assistant}}{Jan 2018 - May 2018} \\
 \teachblock{\textbf{Database Systems}, Cornell University, \textit{Teaching Assistant}}{Aug 2017 - Dec 2017} \\
 \teachblock{\textbf{Data Structures}, University of Illinois at Urbana-Champaign, \textit{Course Assistant}}{Aug 2015 - May 2017}
 
@@ -200,7 +206,7 @@ runtime system, Charm++\footnotemark[1], for high performance computing applicat
 \section{Programming Skills}
 \vspace{0.1em}
 \textbf{Languages:} C, C++, Python, Java \\
-\textit{Familiar with various parallel computing, RPC, build, and version control systems.}
+\textit{Familiar with various parallel computing, RPC, build, and version control frameworks/systems.}
 
 
 
