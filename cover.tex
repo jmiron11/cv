@@ -1,0 +1,148 @@
+\documentclass[10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{lmodern}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=MidnightBlue,
+}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\Hrule}{\par\rule{\linewidth}{0.3mm}}
+
+\renewcommand{\baselinestretch}{1.14} 
+
+\title{Curriculum Vitae}
+\author{Justin Miron}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}
+
+\titlespacing\section{0pt}{8pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\setlength{\leftskip}{2pt}
+\newcommand{\leftrightrow}[2]{
+	#1 \hfill #2 \\
+}
+
+\newcommand{\titlesection}{
+\parindent=0pt
+\setlength{\parskip}{0.1em}
+
+\par{\begin{center}\LARGE Justin Miron\end{center}}
+
+\begin{minipage}[t]{0.40\textwidth}
+Address: 110 Lake Street, Ithaca, NY, 14850 \\
+Links: \href{http://justinmiron.com}{Website}, \href{https://github.com/jmiron11}{Github}, \href{https://www.linkedin.com/in/justinmiron/}{LinkedIn}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.40\textwidth}
+Email: \href{mailto:justinmiron@cs.cornell.edu}{justinmiron@cs.cornell.edu} \\
+Phone: (810) 841-8557
+\end{minipage}
+\vspace{0.3em}
+\Hrule
+}
+
+% \newcommand{\teachblock}[2]{
+% 	\leftrightrow{#1}{#2}
+% }
+
+\newcommand{\teachblock}[2]{
+\begin{minipage}[t]{0.20\textwidth}
+\vspace*{0.4em}
+\begin{flushright}#2\end{flushright}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.76\textwidth}
+\vspace*{0.4em}
+	#1
+\end{minipage}
+\vspace{0.2em}
+}
+
+\newcommand{\workblock}[4]{
+\begin{minipage}[t]{0.14\textwidth}
+\vspace*{0.4em}
+\begin{flushright}#3\end{flushright}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.82\textwidth}
+\vspace*{0.4em}
+	\textbf{#1} \\
+	#2 \\
+    #4
+\end{minipage}
+\vspace{0.7em}
+}
+
+\newcommand{\workblockempty}[2]{
+\begin{minipage}[t]{0.14\textwidth}
+\vspace*{0.4em}
+\begin{flushright}#2\end{flushright}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.82\textwidth}
+\vspace*{0.4em}
+	\textbf{#1}
+\end{minipage}
+\vspace{0.1em}
+}
+
+\newcommand{\workblocktwo}[3]{
+\begin{minipage}[t]{0.14\textwidth}
+\vspace*{0.4em}
+\begin{flushright}#2\end{flushright}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.82\textwidth}
+\vspace*{0.4em}
+	\textbf{#1} \\
+    #3
+\end{minipage}
+\vspace{0.7em}
+}
+
+
+\newcommand{\researchblock}[3]{
+	\leftrightrow{\textbf{#1}}{#2}#3
+}
+
+
+\newcommand{\educationblock}[3]{
+	\leftrightrow{\textbf{#1}}{#2}
+    #3
+}
+
+% \newcommand{\educationblock}[3]{
+% \begin{minipage}[t]{0.14\textwidth}
+% \vspace*{0.4em}
+% \begin{flushright}#2\end{flushright}
+% \end{minipage}
+% \hfill\vline\hfill
+% \begin{minipage}[t]{0.82\textwidth}
+% \vspace*{0.4em}
+% 	\textbf{#1} \\
+% 	#3 \\
+% \end{minipage}
+% \vspace{0.7em}
+% }
+
+\begin{document}
+\noindent Spotify,
+\vspace{0.1in}
+
+I’m Justin, a PhD student at Cornell University researching techniques for building large-scale distributed systems. I entered graduate school because I enjoy solving the unique challenges that distributed systems bring at the intersection of compute, storage, and networks. My own research has lead to improving utilization without high performance overhead for big data analytical systems, improving network bandwidth allocation at Google, and a slight tangent into privacy-aware distributed systems. It has given me the chance to better understand and reason about these systems, and has shown me that these are the computer science challenges I enjoy solving most.
+\vspace{0.1in}
+
+Later this year, I intend to leave my PhD program to pursue a career in industry and I believe Spotify is the place for that. Tough distributed system challenges aside, I first and foremost love music. Music is incredibly powerful and I believe (as I’m sure many employees do) that Spotify has revolutionized how we listen to and discover music. I would like to be a part of that and solve all the fun challenges distributed systems bring.
+
+\vspace{0.1in}
+- Justin
+\end{document}

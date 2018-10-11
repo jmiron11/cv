@@ -150,48 +150,39 @@ Advisor: \href{http://www.cs.cornell.edu/~ragarwal/}{Prof. Rachit Agarwal}}
 \vspace{0.1em}
 Graduate \{Computer Networks, Distributed Algorithms, Distributed Systems, Computer Networks, Programming Languages \& Compilers\}, Computer Architecture, Networking with Big Data, Operating System Design
 
-\section{Current Research Projects}
-\vspace{0.1em}
-\researchblock{Compute-storage stack for storage-disaggregated datacenters}{\href{http://www.cs.cornell.edu/~ragarwal/}{Rachit Agarwal}}
-{
-	Building a robust storage stack that leverages shared compute co-located caches to reduce accesses to remote storage. This requires tackling challenges across scheduling, networks, and caching. Current work involves co-designing compute and caching layers to maximize cache utility across the set of compute servers.
-}
-
-\vspace{0.6em}
-
-\researchblock{Secure, encrypted key-value stores}{\href{http://www.cs.cornell.edu/~ragarwal/}{Rachit Agarwal}, \href{https://rist.tech.cornell.edu/}{Tom Ristenpart}}
-{
-	Design of an encrypted key-value store secure from prevalent server-side attacks, such as leakage-abuse, through an intersection of distributed systems and encryption techniques.
-}
-
-\section{Prior Research Projects}
-\vspace{0.1em}
-\researchblock{Compute scaling for parallel computing on high latency public clouds}{Senior Thesis}
-{
- 	\textit{Techniques: } On-demand adaptive replication and load balancing, system support for hardware elasticity
-}
-
-\vspace{0.6em}
-
-\researchblock{Lowering message latency on high performance clusters}{Parallel Programming Lab}
-{
-	\textit{Techniques: } Near-unbounded multi-producer multi-consumer lock-free queue, no-copy RDMA protocol.
-}
-
 \section{Work Experience}
 \vspace{-0.4em}
-\workblock{Software Engineering Intern at Google, Sunnyvale, CA}{\href{https://ai.google/research/pubs/pub43838}{Network Infrastructure}}{Summer 2018}{Improved network bandwidth allocation on Google's inter-datacenter WAN. Techniques to improve allocation included machine learning and real-time control system algorithms; and algorithmic analysis of existing bandwidth allocation techniques.}
+\workblocktwo{Research Assistant at Cornell, Ithaca, NY}{Fall 2017-}{
+Designing an encrypted key-value store that hides access patterns from server-side adversaries through
+new distributed systems and encryption techniques.
+Co-designing scheduling and caching in analytical batch processing systems to improve server utilization and performance through multiplexing cache resources across the compute layer.}
 
-\workblock{Software Engineering Intern at Microsoft, Aliso Viejo, CA}{\href{https://azure.microsoft.com/en-us/services/sql-data-warehouse/}{Azure Data Warehouse Group}}{Summer 2017}{Built a distributed query monitoring prototype through instrumentation and communication across distributed query execution components.}
-
-\workblocktwo{Software Engineer at \href{http://www.charmplusplus.com/}{Charmworks Inc.}, Champaign, IL}{2017}{Optimized communication latency in a parallel runtime system, Charm++, for high performance computing applications, this work built off of prior undergraduate research. Modified shared memory parallel applications to operate with distributed memory with low overhead.
+\workblock{Software Engineering Intern at Google, Sunnyvale, CA}{\href{https://ai.google/research/pubs/pub43838}{Network Infrastructure}}{Summer 2018}{
+Built a framework (enabled in production) for pluggable bandwidth allocation policies for fine-grained groups of flows on Google's inter-datacenter WANs. Designed new techniques on top of the framework to improve allocation through machine learning and real-time control system algorithms; and algorithmic analysis of existing bandwidth allocation techniques.
 }
 
-\workblockempty{Research Assistant at University of Illinois at Urbana-Champaign, Urbana, IL}{2017}
+\workblock{Software Engineering Intern at Microsoft, Aliso Viejo, CA}{\href{https://azure.microsoft.com/en-us/services/sql-data-warehouse/}{Azure Data Warehouse Group}}{Summer 2017}{
+Built a distributed query monitoring system for Azure Data Warehouse through instrumentation and communication across distributed query execution components. This enabled understanding query execution across disparate components for easier debuggability and performance profiling.}
+
+\workblocktwo{Software Engineer at \href{http://www.charmplusplus.com/}{Charmworks Inc.}, Champaign, IL}{2017}{
+Modified shared memory parallel applications built for high performance clusters to operate on distributed memory runtimes (executed on the cloud) with low overhead. Characterized and tackled challenges involved with overcoming higher cloud latencies when moving scientific computing applications to cloud.}
+
+\workblocktwo{Research Assistant at University of Illinois at Urbana-Champaign, Urbana, IL}{2017}{
+	Co-designed algorithms for load balancing and replication of compute objects to
+	quickly respond to load imbalance in clusters. Lowered latency of communication protocols for a parallel runtime system through a no-copy RDMA protocol, removing a data copy from the end-to-end latency, and a new design for a near-unbounded multi-producer multi-consumer queue that lead to a 60\% improvement over existing lock-free approaches).
+}
 
 \workblockempty{Intern with \href{https://cloud.google.com/compute/}{Google Compute Engine} at Google, Seattle, WA}{Summer 2016}
 
 \workblockempty{Intern at ViaSat Inc., Carlsbad, CA}{Summer 2015}
+
+\vspace{-0.4em}
+
+\section{Side-Projects}
+\textbf{Programmable caching} (\textit{C++, Bazel, gRPC}): A framework for easily programming a cluster caching layer to implement flexible and dynamic caching policies. \\
+\textbf{Never stop bouncing} (\textit{C, SDL, CMake}): A 2D side-scroller game built in SDL about a bouncy ball trying to find true love. \\
+\textbf{Web-scraping Detroit Red Wing statistics} (\textit{Python}): Using web-scraped statistics to show that the Detroit Red Wings are the single greatest hockey team. \\
+\textbf{Music-swap} (\textit{Android, Java}): Android app that allows users to match according to shared music tastes and exchange artists (pretty much tinder for music).
 
 \vspace{-0.4em}
 
@@ -207,7 +198,5 @@ Graduate \{Computer Networks, Distributed Algorithms, Distributed Systems, Compu
 \vspace{0.1em}
 \textbf{Languages:} C, C++, Python, Java \\
 \textit{Familiar with various parallel computing, RPC, build, and version control frameworks/systems.}
-
-
 
 \end{document}
